@@ -20,11 +20,16 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('v_contoh');
 	}
 
 	public function coba ()
  	{  echo 'HASIL COBA-COBA';
 
+	}
+
+	public function contoh ($param=null)
+	{
+		$this->load->view('v_contoh');
 	}
 }
