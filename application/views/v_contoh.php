@@ -12,7 +12,7 @@
         <tr>
             <td> NO</td>
             <td>Nama</td>
-            <td>Alamat</td>
+            <td>Alamata</td>
         </tr>
     </table>
 
