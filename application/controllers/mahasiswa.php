@@ -8,6 +8,6 @@ class mahasiswa extends Ci_Controller
 	
 	public function jurusan ()
 	{
-		 echo 'D3 Sistem Informasi skjdfbkjsdf ';
+		 echo 'D3 Sistem Informasi gimana  ';
 	}
 }
