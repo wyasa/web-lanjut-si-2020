@@ -7,5 +7,8 @@
 </head>
 <body>
     <h2> Data Mahasiswa<h/2>
+    <p> Nama : <?php echo $nama; ?> </p>
+    <p> Alamat : <?php echo $alamat; ?> </p>
+    <p> NIM : <?php echo $nim; ?> </p>
 </body>
 </html>
