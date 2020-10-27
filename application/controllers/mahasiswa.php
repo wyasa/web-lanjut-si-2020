@@ -6,7 +6,7 @@
 class mahasiswa extends Ci_Controller
 {
 	
-	public function index ($jur=0, $nim=0)
+	public function index ($nim=0,$jur=0)
 	{
 		$data ['nama']= 'Gede Wiyana yasa';
 		$data ['alamat']= 'gedur';
