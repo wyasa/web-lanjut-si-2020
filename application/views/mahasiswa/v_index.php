@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Data Mahasiswa</title>
 </head>
 <body>
-    <h2> coba coaba </h2>
+    <h2> Data Mahasiswa<h/2>
 </body>
 </html>
