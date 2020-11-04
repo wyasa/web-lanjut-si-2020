@@ -66,23 +66,26 @@
     </tr>
   </thead>
   <tbody>
+  <?php $no =1; ?>
+  <?php foreach ($tbl_mahasiswa as $key) { ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Pahrul</td>
-      <td>20020123992</td>
-      <td>Mataram</td>
+      <th scope="row"><?=$no++?></th>
+      <td> <?= $key->nama ?> </td>
+      
+      <td> <?= $key->nim ?> </td>
+      <td> <?= $key->alamat ?> </td>
       <td> <button type="button" class="btn btn-warning">Edit </button> 
        <button type="button" class="btn btn-danger">Delete</button> </td>
     </tr>
-    <tr>
+    <!-- <tr>
       <th scope="row">2</th>
       <td>Irfan</td>
       <td>20020123929</td>
       <td>Mataram Lagi</td>
       <td> <button type="button" class="btn btn-warning">Edit </button> 
        <button type="button" class="btn btn-danger">Delete</button> </td>
-    </tr>
-    
+    </tr> -->
+    <?php } ?>
   </tbody>
 </table>
     

@@ -13,8 +13,8 @@ class mahasiswa extends Ci_Controller
 		$data ['nim']= $nim;
 		$data ['jurusan']=$jur;
 
+		$data['tbl_mahasiswa'] = $this->db->get('mahasiswa')->result();
 
-		
 
 		$this->load->view('mahasiswa/V_index',$data);
 	}
