@@ -3,7 +3,7 @@
 class m_mhs extends CI_Model
 {
     private $table = 'mahasiswa';
-    public function getAll();
+    public function getAll()
     {
         //select from table
         return $this->db->get($this->table)->result();
