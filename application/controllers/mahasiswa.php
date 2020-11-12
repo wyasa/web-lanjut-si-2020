@@ -1,9 +1,8 @@
+
 <?php
 
-/**
- * 
- */
-class mahasiswa extends Ci_Controller
+
+class mahasiswa extends CI_Controller
 {
 	public function __construct(){
 		parent:: __construct();
@@ -30,7 +29,10 @@ class mahasiswa extends Ci_Controller
 			'alamat' => $alamat
 		];
 
-		var_dump ($data_input);
+		// var_dump ($data_input);
+
+		$simpan = $this->m_mhs->add($data_input);
+		redirect('mahasiswa/index');
 
 	}
 	
@@ -53,3 +55,4 @@ class mahasiswa extends Ci_Controller
 	// 	 echo 'D3 Sistem Informasi gimana  ';
 	// }
 }
+?>

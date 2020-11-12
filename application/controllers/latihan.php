@@ -9,3 +9,4 @@ class latihan extends Ci_Controller
 		 
 	}
 }
+?>
