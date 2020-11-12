@@ -29,7 +29,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Tambah Data</a>
+        <a class="nav-link" href="<?= site_url('mahasiswa/tambah') ?>">Tambah Data</a>
       </li>
       </ul>
   </div>
@@ -53,6 +53,7 @@
   <div class="card-header">
     Data Mahasiswa
   </div>
+  <a href="<?= site_url('mahasiswa/tambah') ?>" class="btn btn-primary" >Tambah Data</a> <br> <br>
   <div class="card-body">
     
     <table class="table table-bordered">
