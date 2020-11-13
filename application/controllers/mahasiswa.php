@@ -10,7 +10,7 @@ class mahasiswa extends CI_Controller
 	}
 
 	public function index () {
-		$data['tbl_mahasiswa']= $this->m_mhs->getAll();
+		$data['tbl_mahasiswa']= $this-> m_mhs->getAll();
 		$this->load->view('mahasiswa/v_index',$data);
 	}
 
@@ -29,9 +29,9 @@ class mahasiswa extends CI_Controller
 			'alamat' => $alamat
 		];
 
-		// var_dump ($data_input);
+		
 
-		$simpan = $this->m_mhs->add($data_input);
+		$simpan = $this-> m_mhs->m_Add($data_input);
 		redirect('mahasiswa/index');
 
 	}
