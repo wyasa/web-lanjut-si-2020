@@ -44,6 +44,18 @@ class AController extends CI_Controller
 			redirect('AController/index');
 		}
 
+	public function edit ($input_nim)
+		{
+			$data['data_nim']= $this->AModel->getWhere($input_nim);
+			return $this->load->view('mahasiswa/v_edit',$data);
+	}
+
+	public function simpan_edit ($input_nim)
+	{
+
+	}
+
+
 	}
 	
 

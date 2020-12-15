@@ -18,7 +18,12 @@ class AModel extends CI_Model
     }
     public function delete ($input_nim)
     {
-        $this->db->delete($this->table, ['nim => $input_nim']);
+        $this->db->delete($this->table, ['nim' => $input_nim]);
+    }
+    public function getWhere ($input_nim)
+    {
+        return $this->db->get_where($this->table, ['nim'=> $input_nim])->row_object();
+
     }
 
 }
