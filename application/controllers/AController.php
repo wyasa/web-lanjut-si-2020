@@ -2,15 +2,15 @@
 <?php
 
 
-class mahasiswa extends CI_Controller
+class AController extends CI_Controller
 {
 	public function __construct(){
 		parent:: __construct();
-		$this->load->model('m_mhs');
+		$this->load->model('AModel');
 	}
 
 	public function index () {
-		$data['tbl_mahasiswa']= $this-> m_mhs->getAll();
+		$data['mahasiswa']= $this-> AModel->getAll();
 		$this->load->view('mahasiswa/v_index',$data);
 	}
 
@@ -19,20 +19,30 @@ class mahasiswa extends CI_Controller
 	}
 
 	public function proses_tambah(){
-		$nama = $this->input->post('txtnama');
-		$nim = $this->input->post('intnim');
-		$alamat = $this->input->post('txtalamat');
+		$nim = $this->input->post('nim');
+		$nama = $this->input->post('nama');
+		$alamat = $this->input->post('alamat');
+		
 
 		$data_input = [
+			'nim'=> $nim,
 			'nama'=> $nama,
-			'nim' => $nim,
-			'alamat' => $alamat
+			'alamat' => $alamat,
+			
 		];
 
 		
 
-		$simpan = $this-> m_mhs->m_Add($data_input);
-		redirect('mahasiswa/index');
+		$simpan = $this-> AModel->m_Add($data_input);
+		redirect('AController/index');
+	}
+
+	public function hapus($input_nim)
+		{
+			// echo $input_nim;
+			$this->AModel->delete($input_nim);
+			redirect('AController/index');
+		}
 
 	}
 	
@@ -54,5 +64,5 @@ class mahasiswa extends CI_Controller
 	// {
 	// 	 echo 'D3 Sistem Informasi gimana  ';
 	// }
-}
+
 ?>

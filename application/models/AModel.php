@@ -1,6 +1,6 @@
 <?php
 
-class m_mhs extends CI_Model
+class AModel extends CI_Model
 {
     private $table = 'mahasiswa';
 
@@ -16,6 +16,11 @@ class m_mhs extends CI_Model
         $this->db->insert($this->table, $data_input);
   
     }
+    public function delete ($input_nim)
+    {
+        $this->db->delete($this->table, ['nim => $input_nim']);
+    }
+
 }
 
 ?>
