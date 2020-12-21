@@ -33,14 +33,18 @@
 <!--  
     <div class="form-group">
 		<label for="nama">Alamat</label>
-		<input type="textarea" value="<?=$data_nim->alamat?>" name="nama" class="form-control" placeholder="Masukan Nama..">
+		<input type="textarea" value=",>" name="nama" class="form-control" placeholder="Masukan Nama..">
     </div> -->
 
     <div class="form-group">
-    <label for="exampleFormControlTextarea1">Alamat</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
-    value="<?=$data_nim->alamat?>"
-    </textarea>
+    <!-- <label for="exampleFormControlTextarea1">Alamat</label> -->
+    <!-- <input type="textarea" row=3 value=" " name="alamat" class="form-control" placeholder="Masukan Nama.."
+    > -->
+
+    <label for="alamat">Alamat</label>
+  
+     <textarea class="form-control" name="alamat" rows="3" > <?=$data_nim->alamat?> </textarea>
+    
   </div>
     
      <input type ="submit" name="submit" value="Simpan" 

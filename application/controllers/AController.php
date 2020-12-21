@@ -50,9 +50,27 @@ class AController extends CI_Controller
 			return $this->load->view('mahasiswa/v_edit',$data);
 	}
 
-	public function simpan_edit ($input_nim)
-	{
+	
 
+
+	public function simpan_edit ()
+	{	$nim = $this->input->post('nim');
+		$nama = $this->input->post('nama');
+		$alamat = $this->input->post('alamat');
+ 
+	$data = array(
+		'nim' => $nim,
+		'nama' => $nama,
+		'alamat' => $alamat
+	);
+ 
+	$where = array(
+		'nim' => $nim
+	);
+ 
+	$this->AModel->update_data($where,$data,'mahasiswa');
+	redirect('AController/index');
+		
 	}
 
 
