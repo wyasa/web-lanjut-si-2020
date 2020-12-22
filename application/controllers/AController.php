@@ -11,6 +11,7 @@ class AController extends CI_Controller
 
 	public function index () {
 		$data['mahasiswa']= $this-> AModel->getAll();
+		$this->load->view('template/header');
 		$this->load->view('mahasiswa/v_index',$data);
 	}
 
@@ -31,6 +32,7 @@ class AController extends CI_Controller
 			
 		];
 
+
 		
 
 		$simpan = $this-> AModel->m_Add($data_input);
@@ -47,6 +49,7 @@ class AController extends CI_Controller
 	public function edit ($input_nim)
 		{
 			$data['data_nim']= $this->AModel->getWhere($input_nim);
+			$this->load->view('template/header');
 			return $this->load->view('mahasiswa/v_edit',$data);
 	}
 
