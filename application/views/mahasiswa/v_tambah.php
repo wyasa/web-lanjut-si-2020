@@ -9,7 +9,7 @@
 
     <link rel="stylesheet"
     href="<?=base_url('assets/bootstrap/js/bootstrap.bundle.min.js')?>">    
-    <title> STOK TOKO MAKMUR</title>
+    <title> FORM DATA MAHASISWA</title>
 
 </head>
 <body>

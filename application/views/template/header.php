@@ -25,10 +25,13 @@
       <li class="nav-item">
         <a class="nav-link" href='Controller/tambah'>Tambah Data</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('login/logout') ?>">Log Out</a>
+      </li>
       
     </ul>
     <span class="navbar-text">
-      Igedewiyanayasa
+      <?php echo $this->session->userdata('nama_pengguna');?>
     </span>
   </div>
 </nav>

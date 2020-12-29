@@ -28,10 +28,16 @@ class login extends CI_Controller
                 $this->session->set_userdata($data_session);
                 redirect ('AController/index');
             }else{
-                 $this->session->set_flashdata('pesan', 'username dan password salah');
+                 $this->session->set_flashdata('pesan', 'Maaf username atau password anda salah');
                  redirect ('login/index');
             }
 
+        }
+
+        public function logout ( )
+        {
+            $this->session->sess_destroy();
+            redirect ('login/index');
         }
 
 
