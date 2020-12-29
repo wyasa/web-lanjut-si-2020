@@ -43,7 +43,7 @@
 
         <a href="<?=site_url('AController/edit/'.$key->nim)?>"onclick="return confirm('Yakin Diedit')"
        class ="btn-info btn-sm" class ="btn btn-info  btn-sm">Edit<a/>
-/''''''''''''''''''',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'
+
        <a  href="<?=site_url('AController/hapus/' . $key->nim)?>"onclick="return confirm('Yakin Dihapus')"
        class ="btn-danger btn-sm">Delete</a>
 
