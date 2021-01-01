@@ -4,6 +4,12 @@ class m_user extends CI_Model
 {
 
     private $table ='user';
+    
+    public function getAll()
+    {
+        //select from table
+        return $this->db->get($this->table)->result();
+    }
 
 
 
@@ -14,7 +20,7 @@ class m_user extends CI_Model
         return $this->db->get($this->table);
 
     }
-    
+
     public function m_Add( $data_input ){
         //insert into value
         $this->db->insert($this->table, $data_input);

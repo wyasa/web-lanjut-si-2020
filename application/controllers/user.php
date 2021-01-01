@@ -15,21 +15,22 @@ class user extends CI_Controller
 	}
 
 	public function view_index(){
-		$this->load->view('user/v_user.php');
+		$this->load->view('users/v_user.php');
 	}
 
 	public function index () {
-		$data['user']= $this-> AModel->getAll();
-		$this->load->view('template/header');
-		$this->load->view('user/v_index',$data);
+		$this->load->view('conf');
 	}
 
+	public function login () {
+		$this->load->view('v_login.php');
+	}
 
 
 	public function proses_tambah(){
 		$id= $this->input->post('id');
 		$username = $this->input->post('username');
-		$password = $this->input->post('password');
+		$password = md5($this->input->post('password'));
 		$nama_lengkap = $this->input->post('nama_lengkap');
 		$hak_akses = $this->input->post('hak_akses');
 
@@ -46,7 +47,7 @@ class user extends CI_Controller
 		
 
 		$simpan = $this-> m_user->m_Add($data_input);
-		redirect('user/v_user');
+		redirect('user/index');
 	}
 
 	public function hapus($input_nim)
