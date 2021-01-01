@@ -102,7 +102,7 @@
                         <?php echo ($this->session->flashdata('pesan')) ?>
                         </div>
                         <?php } ?>
-    <form action="<?=site_url('login/proses')?>" method="post">
+    <form action="<?=site_url('user/proses')?>" method="post">
         <h2 class="text-center">Log in</h2>       
         <div class="form-group">
             <input type="text" name="txtusername" class="form-control" placeholder="Username" required="required">
@@ -118,7 +118,7 @@
             <a href="#" class="float-right">Forgot Password?</a>
         </div>        
     </form>
-    <p class="text-center"><a href="#">Create an Account</a></p>
+    <p class="text-center"><a href="<?=site_url('user/view_index')?>">Create an Account</a></p>
 </div>
 </body>
 </html>

@@ -14,7 +14,12 @@ class m_user extends CI_Model
         return $this->db->get($this->table);
 
     }
-
+    
+    public function m_Add( $data_input ){
+        //insert into value
+        $this->db->insert($this->table, $data_input);
+  
+    }
 
 
 
