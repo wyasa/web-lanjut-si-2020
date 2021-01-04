@@ -15,12 +15,15 @@ class user extends CI_Controller
 	}
 
 	public function view_index(){
+		$this-> load ->view('template/header');
 		$this->load->view('users/v_user.php');
 	}
 
-	public function index () {
-		$this->load->view('conf');
+	public function conf(){
+		$this->load->view('users/conf') ;
+
 	}
+
 
 	public function login () {
 		$this->load->view('v_login.php');
@@ -44,46 +47,46 @@ class user extends CI_Controller
 		];
 
 
-		
-
 		$simpan = $this-> m_user->m_Add($data_input);
-		redirect('user/index');
+		redirect('user/conf');
 	}
 
-	public function hapus($input_nim)
+	public function hapus($input_id)
 		{
 			// echo $input_nim;
 			$this->AModel->delete($input_nim);
 			redirect('AController/index');
 		}
 
-	public function edit ($input_nim)
-		{
-			$data['data_nim']= $this->AModel->getWhere($input_nim);
-			$this->load->view('template/header');
-			return $this->load->view('mahasiswa/v_edit',$data);
+	public function user_edit ($input_id) {
+			$data ['data_id'] = $this-> m_user ->getWhere($input_id);
+			$this->load->view ('template/header');
+			return $this->load->view('users/v_edit',$data);
 	}
 
 	
-
-
-	public function simpan_edit ()
-	{	$nim = $this->input->post('nim');
-		$nama = $this->input->post('nama');
-		$alamat = $this->input->post('alamat');
+	public function simpan_edit (){
+		$id = $this->input->post('id');
+		$username = $this->input->post('username');
+		$password = md5($this->input->post('password'));
+		$nama_lengkap = $this->input->post('nama_lengkap');
+		$hak_akses = $this->input->post('hak_akses');
  
 	$data = array(
-		'nim' => $nim,
-		'nama' => $nama,
-		'alamat' => $alamat
+			'id'=> $id,
+			'username'=> $username,
+			'password' => $password,
+			'nama_lengkap' => $nama_lengkap,
+			'hak_akses' => $hak_akses,
+			
 	);
  
 	$where = array(
-		'nim' => $nim
+		'id' => $id
 	);
  
-	$this->AModel->update_data($where,$data,'mahasiswa');
-	redirect('AController/index');
+	$this-> m_user->update_data($where,$data,'user');
+	redirect('user/index');
 		
 	}
 

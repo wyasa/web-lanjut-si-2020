@@ -7,6 +7,7 @@
     <form action ="<?= site_url('AController/simpan_edit') ?>" method="post">
 
     <h5>Input Data</h5>
+    <div class="container p-3 my-3 border">
 <form>
 <div class="form-group">
 		<label for="nim">NIM</label>
@@ -17,16 +18,6 @@
 		<label for="nama">Nama</label>
 		<input type="text" value="<?=$data_nim->nama?>" name="nama" class="form-control" placeholder="Masukan Nama..">
 	</div>
-<!--  
-    <div class="form-group">
-		<label for="nama">Alamat</label>
-		<input type="textarea" value=",>" name="nama" class="form-control" placeholder="Masukan Nama..">
-    </div> -->
-
-    <div class="form-group">
-    <!-- <label for="exampleFormControlTextarea1">Alamat</label> -->
-    <!-- <input type="textarea" row=3 value=" " name="alamat" class="form-control" placeholder="Masukan Nama.."
-    > -->
 
     <label for="alamat">Alamat</label>
   
@@ -44,6 +35,7 @@
 
 
     </from>
+    </div>
 </div>
 
 

@@ -7,15 +7,13 @@
     <link rel="stylesheet"
     href="<?=base_url('assets/bootstrap/css/bootstrap.min.css')?>">
 
-    <link rel="stylesheet"
-    href="<?=base_url('assets/bootstrap/js/bootstrap.bundle.min.js')?>">    
     <title> FORM DATA USER</title>
 
 </head>
 <body>
-<div class="container">
+<div class="container p-3 my-3 border">
 
-    <h2> Tambah User </h2>
+  <center>  <h2> Tambah User </h2> </center>
     <hr>
     <form action ="<?= site_url('user/proses_tambah') ?>" method="post">
 

@@ -27,6 +27,17 @@ class m_user extends CI_Model
   
     }
 
+    public function getWhere ($input_id)
+    {
+        return $this->db->get_where($this->table, ['id'=> $input_id])->row_object();
+
+    }
+    function update_data($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}	
+
+
 
 
 }

@@ -52,9 +52,15 @@ class AController extends CI_Controller
 
 	public function edit ($input_nim)
 		{
-			$data['data_nim']= $this->AModel->getWhere($input_nim);
+			$data['data_nim']= $this-> AModel ->getWhere($input_nim);
 			$this->load->view('template/header');
 			return $this->load->view('mahasiswa/v_edit',$data);
+	}
+
+	
+	public function coba(){
+
+		$this->load->view('users/coba');
 	}
 
 	
