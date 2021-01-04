@@ -19,6 +19,14 @@ class user extends CI_Controller
 		$this->load->view('users/v_user.php');
 	}
 
+	public function index () {
+		$data['user']= $this-> m_user ->getAll();
+		$this->load->view('template/header');
+		$this->load->view('users/v_index',$data);
+	}
+
+
+
 	public function conf(){
 		$this->load->view('users/conf') ;
 
@@ -51,17 +59,20 @@ class user extends CI_Controller
 		redirect('user/conf');
 	}
 
-	public function hapus($input_id)
+	public function hapus ($input_id)
 		{
 			// echo $input_nim;
-			$this->AModel->delete($input_nim);
-			redirect('AController/index');
+			$this-> m_user-> delete($input_id);
+			redirect('user/index');
 		}
 
-	public function user_edit ($input_id) {
-			$data ['data_id'] = $this-> m_user ->getWhere($input_id);
-			$this->load->view ('template/header');
-			return $this->load->view('users/v_edit',$data);
+		
+	public function edit ($input_id) 
+	{
+		$data ['data_id'] = $this -> m_user ->getWhere($input_id);	
+		$this-> load->view ('template/header');
+			return $this-> load-> view('users/v_edit',$data);
+			
 	}
 
 	

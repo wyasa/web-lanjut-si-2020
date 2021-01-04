@@ -28,6 +28,9 @@
       <li class="nav-item">
         <a class="nav-link" href='AController/tambah'>Tambah Data</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('user/index') ?>">User Data</a>
+      </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
