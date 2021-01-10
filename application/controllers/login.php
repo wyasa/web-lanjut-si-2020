@@ -20,7 +20,7 @@ class login extends CI_Controller
         if ( $cek->num_rows() > 0) {
                 $isi = $cek->row_object();
                 $data_session = [
-                    'nama_pengguna' => $isi->nama_lengkap,
+                    'username' => $isi->username,
                     'hak_pengguna'=> $isi->hak_akses
                 ];
 

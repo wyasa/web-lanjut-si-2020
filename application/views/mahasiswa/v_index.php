@@ -28,7 +28,7 @@
   </thead>
   <tbody>
   <?php $no =1; ?>
-  <?php foreach ($mahasiswa as $key) { ?>
+  <?php foreach ($stok as $key) { ?>
     <tr>
       <th scope="row"><?=$no++?></th>
       <td> <?= $key->nim ?> </td>

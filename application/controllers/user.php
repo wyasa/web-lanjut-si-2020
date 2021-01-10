@@ -42,14 +42,13 @@ class user extends CI_Controller
 		$id= $this->input->post('id');
 		$username = $this->input->post('username');
 		$password = md5($this->input->post('password'));
-		$nama_lengkap = $this->input->post('nama_lengkap');
+	
 		$hak_akses = $this->input->post('hak_akses');
 
 		$data_input = [
 			'id'=> $id,
 			'username'=> $username,
 			'password' => $password,
-			'nama_lengkap' => $nama_lengkap,
 			'hak_akses' => $hak_akses,
 			
 		];

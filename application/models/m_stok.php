@@ -1,8 +1,8 @@
 <?php
 
-class AModel extends CI_Model
+class m_stok extends CI_Model
 {
-    private $table = 'mahasiswa';
+    private $table = 'stok';
 
     public function getAll()
     {
@@ -16,13 +16,13 @@ class AModel extends CI_Model
         $this-> db->insert($this-> table, $data_input);
   
     }
-    public function delete ($input_nim)
+    public function delete ($input_id)
     {
-        $this-> db->delete($this-> table, ['nim' => $input_nim]);
+        $this-> db->delete($this-> table, ['id' => $input_id]);
     }
-    public function getWhere ($input_nim)
+    public function getWhere ($input_id)
     {
-        return $this-> db->get_where($this-> table, ['nim'=> $input_nim])->row_object();
+        return $this-> db->get_where($this-> table, ['id'=> $input_id])->row_object();
 
     }
     function update_data($where,$data,$table){

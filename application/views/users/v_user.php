@@ -34,10 +34,7 @@
 		<input type="password" name="password" class="form-control" placeholder="Masukan Password..">
 	</div>
 
-    <div class="form-group">
-		<label for="nama_lengkap">NamaLengkap</label>
-		<input type="text" name="nama_lengkap" class="form-control" placeholder="Masukan Nama Lengkap..">
-	</div>
+    
  
 	<div class="form-group">
 		<label for="hak_akses">Hak Akses</label>

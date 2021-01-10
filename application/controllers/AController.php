@@ -6,15 +6,16 @@ class AController extends CI_Controller
 {
 	public function __construct(){
 		parent:: __construct();
-		$this->load->model('AModel');
-		if (!$this->session->userdata ('nama_pengguna')){
+
+		$this->load->model('m_stok');
+		if (!$this->session->userdata ('username')){
 			redirect ('login/index');
 
 		}
 	}
 
 	public function index () {
-		$data['mahasiswa']= $this-> AModel->getAll();
+		$data['stok']= $this-> m_stok->getAll();
 		$this->load->view('template/header');
 		$this->load->view('mahasiswa/v_index',$data);
 	}
@@ -60,8 +61,9 @@ class AController extends CI_Controller
 	
 	public function coba(){
 
-		$this->load->view('users/coba');
+		$this->load->view('toko/index');
 	}
+
 
 	
 
