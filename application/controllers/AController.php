@@ -16,8 +16,8 @@ class AController extends CI_Controller
 
 	public function index () {
 		$data['stok']= $this-> m_stok->getAll();
-		$this->load->view('template/header');
-		$this->load->view('mahasiswa/v_index',$data);
+		$this->load->view('toko/header');
+		$this->load->view('toko/index',$data);
 	}
 
 	public function tambah(){
