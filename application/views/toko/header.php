@@ -10,6 +10,21 @@
 
   <title>TOKO MAKMUR</title>
 
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js "></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+  
+  
+  <script>
+$( function() {
+  $( "#tgl" ).datepicker({
+    dateFormat: "dd-mm-yy"
+  });
+} );
+</script>
+
   <!-- Bootstrap core CSS -->
   <link  href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?=base_url('vendor/bootstrap/css/bootstrap.min.css');?>">
@@ -28,8 +43,8 @@
     <div class="bg-info border-right " id="sidebar-wrapper">
       <div class="sidebar-heading "> <font color='white'>MENU ACTION</font> </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-">STOK</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">INPUT</a>
+        <a href="<?= site_url('AController/index') ?>" class="list-group-item list-group-item-action bg-">STOK</a>
+        <a href="<?= site_url('i_controller/index') ?>" class="list-group-item list-group-item-action bg-light">INPUT</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">OUTPUT</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">LOGOUT</a>
         <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>

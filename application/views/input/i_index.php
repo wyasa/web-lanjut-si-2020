@@ -2,20 +2,22 @@
 
 
       <div class="container-fluid">
-        <h1 class="mt-4"><font color='blue'>STOCK GUDANG</font></h1>
-        
+        <h1 class="mt-4"><font color='blue'>Rekap Barang Masuk</font></h1>
+        <a href="<?= site_url('i_controller/tambah') ?>" class="btn btn-warning bg-dark" ><font color='white'>Input Barang</font></a> <br> <br>
         <div class="card-body">
     
     <table class="table table-bordered">
   <thead>
     <tr>
     
-    <th scope="col">NO</th>  
+    <th scope="col">NO</th>
+    <th scope="col">KD.PEMBELIAN</th>  
     <th scope="col">ID</th>
       <th scope="col">Nama</th>
       <th scope="col">Merk</th>
       <th scope="col">Kategori</th>
       <th scope="col">Jumlah</th>
+      <th scope="col">TANGGAL</th>
       <th scope="col">Aksi</th>
       
      
@@ -23,14 +25,16 @@
   </thead>
   <tbody>
   <?php $no =1; ?>
-  <?php foreach ($stok as $key) { ?>
+  <?php foreach ($pembelian as $key) { ?>
     <tr>
       <th scope="row"><?=$no++?></th>
+      <td> <?= $key->kd_pembelian ?> </td>
       <td> <?= $key->id ?> </td>
       <td> <?= $key->nama ?> </td>
       <td> <?= $key->merk ?> </td>
       <td> <?= $key->kategori ?> </td>
       <td> <?= $key->jumlah ?> </td>
+      <td> <?= $key->tgl ?> </td>
       <td class="text-center">
 
       <!-- <td> <button type="button" class="btn btn-warning">Edit </button> 
@@ -38,10 +42,10 @@
 
         
 
-        <a href="<?=site_url('AController/edit/'.$key->id)?>"onclick="return confirm('Yakin Diedit')"
+        <a href="<?=site_url('i_controller/edit/'.$key-> kd_pembelian)?>"onclick="return confirm('Yakin Diedit')"
        class ="btn-info btn-sm" class ="btn btn-info  btn-sm">Edit<a/>
 
-       <a  href="<?=site_url('AController/hapus/' . $key->id)?>"onclick="return confirm('Yakin Dihapus')"
+       <a  href="<?=site_url('i_controller/hapus/' . $key-> kd_pembelian)?>"onclick="return confirm('Yakin Dihapus')"
        class ="btn-danger btn-sm">Delete</a>
 
        <?php } ?>

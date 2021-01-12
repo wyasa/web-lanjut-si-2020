@@ -6,7 +6,7 @@
     <hr>
     <form action ="<?= site_url('AController/simpan_edit') ?>" method="post">
 
-    <h5>Input Data</h5>
+    <h5>Stock Card</h5>
     <div class="container p-3 my-3 border">
 <form>
 <div class="form-group">
