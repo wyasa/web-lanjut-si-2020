@@ -14,21 +14,21 @@ class login extends CI_Controller
 
         $this->load->model('m_user');
 
-        $cek = $this->m_user->cek_login($input_username, $input_password);
+        $cek = $this-> m_user->cek_login($input_username, $input_password);
 
             //cek apakah data sesuai
         if ( $cek->num_rows() > 0) {
                 $isi = $cek->row_object();
                 $data_session = [
-                    'username' => $isi->username,
-                    'hak_pengguna'=> $isi->hak_akses
+                    'username' => $isi-> username,
+                    'hak_akses'=> $isi-> hak_akses
                 ];
 
                 //masukan data pengguna kedsalam session
-                $this->session->set_userdata($data_session);
+                $this-> session->set_userdata( $data_session );
                 redirect ('AController/index');
             }else{
-                 $this->session->set_flashdata('pesan', 'Maaf username atau password anda salah');
+                 $this-> session->set_flashdata('pesan', 'Maaf username atau password anda salah');
                  redirect ('login/index');
             }
 
@@ -36,7 +36,7 @@ class login extends CI_Controller
 
  public function logout ( )
         {
-            $this->session->sess_destroy();
+            $this-> session->sess_destroy();
             redirect ('login/index');
         }
 

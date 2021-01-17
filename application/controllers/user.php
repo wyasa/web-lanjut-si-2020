@@ -14,14 +14,14 @@ class user extends CI_Controller
 		// }
 	}
 
-	public function view_index(){
-		$this-> load ->view('template/header');
+	public function createakun (){
+		$this-> load ->view('toko/header');
 		$this->load->view('users/v_user.php');
 	}
 
 	public function index () {
 		$data['user']= $this-> m_user ->getAll();
-		$this->load->view('template/header');
+		$this->load->view('toko/header');
 		$this->load->view('users/v_index',$data);
 	}
 
@@ -69,7 +69,7 @@ class user extends CI_Controller
 	public function edit ($input_id) 
 	{
 		$data ['data_id'] = $this -> m_user ->getWhere($input_id);	
-		$this-> load->view ('template/header');
+		$this-> load->view ('toko/header');
 			return $this-> load-> view('users/v_edit',$data);
 			
 	}
@@ -79,14 +79,14 @@ class user extends CI_Controller
 		$id = $this->input->post('id');
 		$username = $this->input->post('username');
 		$password = md5($this->input->post('password'));
-		$nama_lengkap = $this->input->post('nama_lengkap');
+		
 		$hak_akses = $this->input->post('hak_akses');
  
 	$data = array(
 			'id'=> $id,
 			'username'=> $username,
 			'password' => $password,
-			'nama_lengkap' => $nama_lengkap,
+			
 			'hak_akses' => $hak_akses,
 			
 	);

@@ -2,8 +2,8 @@
 
 
       <div class="container-fluid">
-        <h1 class="mt-4"><font color='blue'>Rekap Barang Masuk</font></h1>
-        <a href="<?= site_url('i_controller/tambah') ?>" class="btn btn-warning bg-dark" ><font color='white'>Input Barang</font></a> <br> <br>
+        <h1 class="mt-4"><font color='blue'>Rekap Barang Keluar</font></h1>
+        <a href="<?= site_url('o_controller/tambah') ?>" class="btn btn-warning bg-dark" ><font color='white'>Output Barang</font></a> <br> <br>
         <div class="card-body">
     
     <table class="table table-bordered">
@@ -11,7 +11,7 @@
     <tr>
     
     <th scope="col">NO</th>
-    <th scope="col">KD.PEMBELIAN</th>  
+    <th scope="col">KD.PENJUALAN</th>  
     <th scope="col">ID</th>
       <th scope="col">Nama</th>
       <th scope="col">Merk</th>
@@ -25,10 +25,10 @@
   </thead>
   <tbody>
   <?php $no =1; ?>
-  <?php foreach ($pembelian as $key) { ?>
+  <?php foreach ($penjualan as $key) { ?>
     <tr>
       <th scope="row"><?=$no++?></th>
-      <td> <?= $key->kd_pembelian ?> </td>
+      <td> <?= $key->kd_penjualan ?> </td>
       <td> <?= $key->id ?> </td>
       <td> <?= $key->nama ?> </td>
       <td> <?= $key->merk ?> </td>
@@ -42,10 +42,10 @@
 
         
 
-        <a href="<?=site_url('i_controller/edit/'.$key-> kd_pembelian)?>"onclick="return confirm('Yakin Diedit')"
+        <a href="<?=site_url('o_controller/edit/'.$key-> kd_penjualan)?>"onclick="return confirm('Yakin Diedit')"
        class ="btn-info btn-sm" class ="btn btn-info  btn-sm">Edit<a/>
 
-       <a  href="<?=site_url('i_controller/hapus/' . $key-> kd_pembelian)?>"onclick="return confirm('Yakin Dihapus')"
+       <a  href="<?=site_url('o_controller/hapus/' . $key-> kd_penjualan)?>"onclick="return confirm('Yakin Dihapus')"
        class ="btn-danger btn-sm">Delete</a>
 
        <?php } ?>

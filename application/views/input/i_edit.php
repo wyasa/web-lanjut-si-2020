@@ -19,8 +19,8 @@
   
   <script>
 $( function() {
-  $( "#date" ).datepicker({
-    dateFormat: "dd-mm-yy"
+  $( "#tgl" ).datepicker({
+    dateFormat: "yy-mm-dd"
   });
 } );
 </script>
@@ -71,7 +71,7 @@ $( function() {
 
     <div class="form-group">
 		<label for="tgl">Tanggal</label>
-		<input type="text"  value="<?=$data_id->tgl?>"name="tgl" class="form-control" placeholder="Masukan tgl ..">
+		<input type="text"  value="<?=$data_id->tgl?>"name="tgl"  id="tgl" class="form-control" placeholder="Masukan tgl ..">
     </div>
 	<!-- <div class="form-group">
 		<label for="alamat">alamat</label>

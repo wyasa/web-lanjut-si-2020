@@ -2,7 +2,7 @@
 <br/>
 
     <div class="alert alert-info" role="alert" >
-    <h2> <center> IGede Wiyana Yasa / 1901050001 </center> </h2>
+    <h2> <center> IGede Wiyana Yasa / 190105000 </center> </h2>
     </div>
 <br>
 

@@ -1,8 +1,8 @@
 <?php
 
-class m_input extends CI_Model
+class m_output extends CI_Model
 {
-    private $table = 'pembelian';
+    private $table = 'penjualan';
 
     public function getAll()
     {
@@ -18,11 +18,11 @@ class m_input extends CI_Model
     }
     public function delete ($input_id)
     {
-        $this-> db->delete($this-> table, ['kd_pembelian' => $input_id]);
+        $this-> db->delete($this-> table, ['kd_penjualan' => $input_id]);
     }
     public function getWhere ($input_id)
     {
-        return $this-> db->get_where($this-> table, ['kd_pembelian'=>$input_id])->row_object();
+        return $this-> db->get_where($this-> table, ['kd_penjualan'=>$input_id])->row_object();
 
     }
     function update_data($where,$data,$table){

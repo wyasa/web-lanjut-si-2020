@@ -19,8 +19,8 @@
   
   <script>
 $( function() {
-  $( "#date" ).datepicker({
-    dateFormat: "dd-mm-yy"
+  $( "#tgl" ).datepicker({
+    dateFormat: "yy-mm-dd"
   });
 } );
 </script>
@@ -34,14 +34,14 @@ $( function() {
 
     <h2> Card Stock </h2>
     <hr>
-    <form action ="<?= site_url('i_controller/simpan_edit') ?>" method="post">
+    <form action ="<?= site_url('o_controller/simpan_edit') ?>" method="post">
 
-    <h5>Input Data</h5>
+    <h5>Output Data</h5>
 <form>
 
 <div class="form-group">
-		<label for="kd_pembelian">KD.Pembelian</label>
-		<input type="text" readonly value="<?=$data_id->kd_pembelian?>" name="kd_pembelian" class="form-control" placeholder="Masukan kode ..">
+		<label for="kd_pembelian">KD.Penjualan</label>
+		<input type="text" readonly value="<?=$data_id->kd_penjualan?>" name="kd_penjualan" class="form-control" placeholder="Masukan kode ..">
     </div>
 
 <div class="form-group">
@@ -71,7 +71,7 @@ $( function() {
 
     <div class="form-group">
 		<label for="tgl">Tanggal</label>
-		<input type="text"  value="<?=$data_id->tgl?>"name="tgl" class="form-control" placeholder="Masukan tgl ..">
+		<input type="text"  value="<?=$data_id->tgl?>" name="tgl" id="tgl"  class="form-control" placeholder="Masukan tgl ..">
     </div>
 	<!-- <div class="form-group">
 		<label for="alamat">alamat</label>
@@ -84,7 +84,7 @@ $( function() {
      
      <a href="<?= site_url('AController/index')?>"
      class="btn btn-warning">Batal</a>
-
+  
 
 
 

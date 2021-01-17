@@ -1,29 +1,29 @@
 <?php
 
-class i_controller extends CI_Controller
+class o_controller extends CI_Controller
 {
     public function __construct(){
 		parent:: __construct();
 
-		$this-> load-> model('m_input');
+		$this-> load-> model('m_output');
 		if (!$this->session->userdata ('username')){
 			redirect ('login/index');
 
 		}
 	}
 	public function index () {
-		$data['pembelian']= $this-> m_input->getAll();
+		$data['penjualan']= $this-> m_output->getAll();
 		$this->load->view('toko/header');
-		$this->load->view('input/i_index',$data);
+		$this->load->view('output/o_index',$data);
 	}
 
 	public function tambah(){
 		$this->load->view('toko/header');
-		$this->load->view('input/i_tambah');
+		$this->load->view('output/o_tambah');
 	}
 
 	public function proses_tambah(){
-		$kd_pembelian = $this->input->post('kd_pembelian');
+		$kd_penjualan = $this->input->post('kd_penjualan');
 		$id = $this->input->post('id');
 		$nama = $this->input->post('nama');
 		$merk = $this->input->post('merk');
@@ -33,7 +33,7 @@ class i_controller extends CI_Controller
 		
 
 		$data_input = [
-			'kd_pembelian'=> $kd_pembelian,
+			'kd_penjualan'=> $kd_penjualan,
 			'id'=> $id,
 			'nama'=> $nama,
 			'merk'=> $merk,
@@ -45,29 +45,29 @@ class i_controller extends CI_Controller
 		];
 
 
-		$simpan = $this-> m_input->m_Add($data_input);
-		redirect('i_controller/index');
+		$simpan = $this-> m_output->m_Add($data_input);
+		redirect('o_controller/index');
 	}
 
 	public function hapus($input_id)
 		{
 			// echo $input_nim;
-			$this-> m_input-> delete($input_id);
-			redirect('i_controller/index');
+			$this-> m_output-> delete($input_id);
+			redirect('o_controller/index');
 		}
 
 	public function edit ($input_id)
 		{
-			$data['data_id']= $this-> m_input->getWhere($input_id);
+			$data['data_id']= $this-> m_output->getWhere($input_id);
 			$this->load->view('toko/header');
-			return $this-> load-> view('input/i_edit',$data);
+			return $this-> load-> view('output/o_edit',$data);
 	}
 
 		
 
 
 	public function simpan_edit ()
-	{	$kd_pembelian = $this->input->post('kd_pembelian');
+	{	$kd_penjualan = $this->input->post('kd_penjualan');
 		$id = $this->input->post('id');
 		$nama = $this->input->post('nama');
 		$merk = $this->input->post('merk');
@@ -79,7 +79,7 @@ class i_controller extends CI_Controller
 
 	$data = array(
 
-		'kd_pembelian'=> $kd_pembelian,
+		'kd_penjualan'=> $kd_penjualan,
 			'id'=> $id,
 			'nama'=> $nama,
 			'merk'=> $merk,
@@ -89,11 +89,11 @@ class i_controller extends CI_Controller
 	);
  
 	$where = array(
-		'kd_pembelian' => $kd_pembelian
+		'kd_penjualan' => $kd_penjualan
 	);
  
-	$this-> m_input-> update_data($where,$data,'pembelian');
-	redirect('i_controller/index');
+	$this-> m_output-> update_data($where,$data,'penjualan');
+	redirect('o_controller/index');
 		
 	}
 

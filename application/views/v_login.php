@@ -115,10 +115,10 @@
         </div>
         <div class="clearfix">
             <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-            <a href="#" class="float-right">Forgot Password?</a>
+            <!-- <a href="#" class="float-right">Forgot Password?</a> -->
         </div>        
     </form>
-    <p class="text-center"><a href="<?=site_url('user/view_index')?>">Create an Account</a></p>
+    <p class="text-center"><a href="<?=site_url('user/createakun')?>">Create an Account</a></p>
 </div>
 </body>
 </html>

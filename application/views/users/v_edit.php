@@ -24,11 +24,7 @@
 		<input type="text" value="<?=$data_id->password?>" name="password" class="form-control" placeholder="Masukan Nama..">
 	</div>
 
-    <div class="form-group">
-		<label for="nama_lengkap">Nama Lengkap</label>
-		<input type="text" value="<?=$data_id->nama_lengkap?>" name="nama_lengkap" class="form-control" placeholder="Masukan Nama..">
-    </div>
-
+    
     <div class="form-group">
 		<label for="hak_akses">Hak Akses</label>
 		<input type="text" value="<?=$data_id->hak_akses?>" name="hak_akses" class="form-control" placeholder="Masukan Nama..">

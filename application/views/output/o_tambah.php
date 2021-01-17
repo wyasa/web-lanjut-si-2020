@@ -18,8 +18,8 @@
   
   <script>
 $( function() {
-  $( "#date" ).datepicker({
-    dateFormat: "dd-mm-yy"
+  $( "#tgl" ).datepicker({
+    dateFormat: "yy-mm-dd"
   });
 } );
 </script>
@@ -33,15 +33,15 @@ $( function() {
 
     <h2> Card Stock </h2>
     <hr>
-    <form action ="<?= site_url('i_controller/proses_tambah') ?>" method="post">
+    <form action ="<?= site_url('o_controller/proses_tambah') ?>" method="post">
 
     <center> <h5>Input Data</h5> </center>
     <br>    
 <form>
 
 <div class="form-group">
-		<label for="kd_pembelian">KD.Pembelian</label>
-		<input type="text" name="kd_pembelian" class="form-control" placeholder="Masukan kode ..">
+		<label for="kd_pembelian">KD.Penjualan</label>
+		<input type="text" name="kd_penjualan" class="form-control" placeholder="Masukan kode ..">
     </div>
 
 <div class="form-group">
@@ -50,7 +50,7 @@ $( function() {
     </div>
     
 	<div class="form-group">
-		<label for="nama">nama</label>
+		<label for="nama">Nama</label>
 		<input type="text" name="nama" class="form-control" placeholder="Masukan Nama..">
 	</div>
  
@@ -71,7 +71,7 @@ $( function() {
 
     <div class="form-group">
 		<label for="tgl">Tanggal</label>
-		<input type="text" name="tgl" class="form-control" placeholder="Masukan tgl ..">
+		<input type="text" name="tgl" id="tgl" class="form-control" placeholder="Masukan tgl ..">
     </div>
 	<!-- <div class="form-group">
 		<label for="alamat">alamat</label>
@@ -82,7 +82,7 @@ $( function() {
      <input type ="submit" name="submit" value="Simpan" 
      class="btn btn-primary">
      
-     <a href="<?= site_url('i_controller/index')?>"
+     <a href="<?= site_url('o_controller/index')?>"
      class="btn btn-warning">Batal</a>
 
 

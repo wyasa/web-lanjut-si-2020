@@ -17,10 +17,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
   
   
+  
   <script>
 $( function() {
   $( "#tgl" ).datepicker({
-    dateFormat: "dd-mm-yy"
+    dateFormat: "yy-mm-dd"
   });
 } );
 </script>
@@ -45,7 +46,8 @@ $( function() {
       <div class="list-group list-group-flush">
         <a href="<?= site_url('AController/index') ?>" class="list-group-item list-group-item-action bg-">STOK</a>
         <a href="<?= site_url('i_controller/index') ?>" class="list-group-item list-group-item-action bg-light">INPUT</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">OUTPUT</a>
+        <a href=" <?= site_url('o_controller/index') ?> " class="list-group-item list-group-item-action bg-light">OUTPUT</a>
+        <a href=" <?= site_url('user/index') ?> " class="list-group-item list-group-item-action bg-light">USERS</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">LOGOUT</a>
         <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a> -->
@@ -63,13 +65,21 @@ $( function() {
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        
+       
+    
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          
-            <li class="nav-item active">
-              <a class="nav-link" href="#">USERS <span class="sr-only">(current)</span></a>
-            </li>
-            
+
+          <span class="nav navbar-nav navbar-right"> <h3> <font color='white'>
+      <?php echo $this-> session-> userdata ('username','hak_akses');?> </font> </h3>
+    </span>
+    <span class="nav navbar-nav navbar-right"> <h3> <font color='white'> (
+      <?php echo $this-> session-> userdata ('hak_akses');?>  ) </font> </h3>
+    </span>
+
+      
             <!-- <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
@@ -82,11 +92,9 @@ $( function() {
                 <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a> -->
-              <!-- </div> -->
-            </li>
+             <!-- </div>
+            </li> --> 
           </ul>
         </div>
-        <span class="navbar-text">
-      <?php echo $this->session->userdata('nama_pengguna');?>
-    </span>
+        
       </nav>
