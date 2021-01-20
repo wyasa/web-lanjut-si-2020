@@ -36,7 +36,7 @@
       <!-- <td> <button type="button" class="btn btn-warning">Edit </button> 
        <button type="button" class="btn btn-danger">Delete</button> </td> -->
 
-        
+       <?php if ($this->session->userdata('hak_akses') =='admin'){ ?>
 
         <a href="<?=site_url('AController/edit/'.$key->id)?>"onclick="return confirm('Yakin Diedit')"
        class ="btn-info btn-sm" class ="btn btn-info  btn-sm">Edit<a/>
@@ -47,8 +47,9 @@
        <?php } ?>
 
   
-      
-      
+      </td>
+      </tr>
+      <?php } ?>
   
        
  
@@ -100,5 +101,8 @@
   </script>
 
 </body>
+
+
+
 
 </html>

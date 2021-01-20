@@ -2,15 +2,15 @@
 <br/>
 
     <div class="alert alert-info" role="alert" >
-    <h2> <center> IGede Wiyana Yasa / 190105000 </center> </h2>
+    <h2> <center> IGede Wiyana Yasa / 1901050001 </center> </h2>
     </div>
 <br>
 
 <div class="card">
   <div class="card-header">
-    DAFTAR USER
+    DAFTAR MAHASISWA
   </div>
-  <a href="<?= site_url('user/tambah') ?>" class="btn btn-primary" >Tambah Data</a> <br> <br>
+  <a href="<?= site_url('AController/tambah') ?>" class="btn btn-primary" >Tambah Data</a> <br> <br>
   <div class="card-body">
     
     <table class="table table-bordered">
@@ -18,37 +18,33 @@
     <tr>
     
     <th scope="col">NO</th>  
-    <th scope="col">Id</th>
-      <th scope="col">Username</th>
-      <th scope="col">Password</th>
-      <th scope="col">Nama_lengkap</th>
-      <th scope="col">Hak_Akses</th>
+    <th scope="col">nim</th>
+      <th scope="col">nama</th>
+      <th scope="col">alamat</th>
       <th scope="col">Aksi</th>
       
      
     </tr>
   </thead>
   <tbody>
-  <?php $no = 1; ?>
-  <?php foreach ($user as $key) { ?>
+  <?php $no =1; ?>
+  <?php foreach ($stok as $key) { ?>
     <tr>
-      <th scope="row"> <?=$no++?> </th>
-      <td> <?= $key->id ?> </td>
-      <td> <?= $key->username ?> </td>
-      <td> <?= $key->password ?> </td>
-      <td> <?= $key->nama_lengkap ?> </td>
-      <td> <?= $key->hak_akses ?> </td>
+      <th scope="row"><?=$no++?></th>
+      <td> <?= $key->nim ?> </td>
+      <td> <?= $key->nama ?> </td>
+      <td> <?= $key->alamat ?> </td>
       <td class="text-center">
 
       <!-- <td> <button type="button" class="btn btn-warning">Edit </button> 
        <button type="button" class="btn btn-danger">Delete</button> </td> -->
-  <?php if ($this-> session-> userdata('hak_akses') =='Admin'){ ?>
+  <?php if ($this->session->userdata('hak_pengguna') =='admin'){ ?>
         
 
-        <a href="<?=site_url('user/edit/'.$key->id)?>"onclick="return confirm('Yakin Diedit')"
+        <a href="<?=site_url('AController/edit/'.$key->nim)?>"onclick="return confirm('Yakin Diedit')"
        class ="btn-info btn-sm" class ="btn btn-info  btn-sm">Edit<a/>
 
-       <a  href="<?=site_url('user/hapus/' . $key->id)?>"onclick="return confirm('Yakin Dihapus')"
+       <a  href="<?=site_url('AController/hapus/' . $key->nim)?>"onclick="return confirm('Yakin Dihapus')"
        class ="btn-danger btn-sm">Delete</a>
 
        <?php } ?>

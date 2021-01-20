@@ -9,8 +9,8 @@ class login extends CI_Controller
 
     public function proses ()
     {
-        $input_username = $this->input->post('txtusername');
-        $input_password = md5($this->input->post('txtpassword'));
+        $input_username= $this->input->post('txtusername');
+        $input_password= md5($this->input->post('txtpassword'));
 
         $this->load->model('m_user');
 
