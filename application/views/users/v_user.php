@@ -46,7 +46,8 @@
 <option value="">--Pilih--</option>
 <option value="Admin">Admin</option>
 <option value="Operator">Operator</option>
-<option value="Kasir">Kasir</option>
+<option value="Kasir">
+Kasir</option>
 
 </select>
 <br>
