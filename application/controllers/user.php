@@ -54,14 +54,14 @@ class user extends CI_Controller
 		];
 
 
-		$simpan = $this-> m_user->m_Add($data_input);
+		$simpan= $this->m_user->m_Add($data_input);
 		redirect('user/conf');
 	}
 
 	public function hapus ($input_id)
 		{
 			// echo $input_nim;
-			$this-> m_user-> delete($input_id);
+			$this->m_user-> delete($input_id);
 			redirect('user/index');
 		}
 

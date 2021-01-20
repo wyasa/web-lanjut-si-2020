@@ -36,12 +36,23 @@
 
     
  
-	<div class="form-group">
+
 		<label for="hak_akses">Hak Akses</label>
-		<input type="text" name="hak_akses" class="form-control" placeholder="Masukan Hak Akses...">
-    </div>
+		<!-- <input type="text" name="hak_akses" class="form-control" placeholder="Masukan Hak Akses...">
+    </div> -->
     
-    
+ 
+<h6><select name="hak_akses">
+<option value="">--Pilih--</option>
+<option value="Admin">Admin</option>
+<option value="Operator">Operator</option>
+<option value="Kasir">Kasir</option>
+
+</select>
+<br>
+<br>
+
+    <div>
      <input type ="submit" name="submit" value="Simpan" 
      class="btn btn-primary">
      

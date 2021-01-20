@@ -47,8 +47,8 @@ $( function() {
         <a href="<?= site_url('AController/index') ?>" class="list-group-item list-group-item-action bg-">STOK</a>
         <a href="<?= site_url('i_controller/index') ?>" class="list-group-item list-group-item-action bg-light">INPUT</a>
         <a href=" <?= site_url('o_controller/index') ?> " class="list-group-item list-group-item-action bg-light">OUTPUT</a>
-        <a href=" <?= site_url('user/index') ?> " class="list-group-item list-group-item-action bg-light">USERS</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">LOGOUT</a>
+        <a href=" <?= site_url('user/index') ?> "class="list-group-item list-group-item-action bg-light">USERS</a>
+        <a href= " <?= site_url('login/logout') ?> " class="list-group-item list-group-item-action bg-light">LOGOUT</a>
         <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a> -->
       </div>

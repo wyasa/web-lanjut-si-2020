@@ -42,7 +42,11 @@
 
       <!-- <td> <button type="button" class="btn btn-warning">Edit </button> 
        <button type="button" class="btn btn-danger">Delete</button> </td> -->
+<<<<<<< HEAD
   <?php if ($this-> session-> userdata('hak_akses') =='admin'){ ?>
+=======
+  <?php if ($this-> session-> userdata('hak_akses') =='Admin'){ ?>
+>>>>>>> 0dfe009f2bf79eeb202a8552d61d4b9f26f0dcab
         
 
         <a href="<?=site_url('user/edit/'.$key->id)?>"onclick="return confirm('Yakin Diedit')"

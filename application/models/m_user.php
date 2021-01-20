@@ -13,11 +13,11 @@ class m_user extends CI_Model
 
 
 
-    public function cek_login ($input_username,$input_password)
+    public function cek_login ($input_username, $input_password)
     {
         $this-> db->where('username',$input_username);
         $this-> db->where('password',$input_password);
-        $this-> db->where('hak_akses',$input_hak);
+    
         return $this-> db->get($this->table);
 
     }

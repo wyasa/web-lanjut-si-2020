@@ -40,7 +40,7 @@
       <!-- <td> <button type="button" class="btn btn-warning">Edit </button> 
        <button type="button" class="btn btn-danger">Delete</button> </td> -->
 
-        
+       <?php if ($this->session->userdata('hak_akses') =='Admin'){ ?>
 
         <a href="<?=site_url('i_controller/edit/'.$key-> kd_pembelian)?>"onclick="return confirm('Yakin Diedit')"
        class ="btn-info btn-sm" class ="btn btn-info  btn-sm">Edit<a/>
@@ -50,6 +50,9 @@
 
        <?php } ?>
 
+       </td>
+      </tr>
+      <?php } ?>
   
       
       

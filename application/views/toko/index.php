@@ -16,7 +16,7 @@
       <th scope="col">Merk</th>
       <th scope="col">Kategori</th>
       <th scope="col">Jumlah</th>
-      <th scope="col">Aksi</th>
+      <th scope="col"><center> Aksi </center></th>
       
      
     </tr>
@@ -36,7 +36,7 @@
       <!-- <td> <button type="button" class="btn btn-warning">Edit </button> 
        <button type="button" class="btn btn-danger">Delete</button> </td> -->
 
-        
+       <?php if ($this->session->userdata('hak_akses') =='Admin'){ ?>
 
         <a href="<?=site_url('AController/edit/'.$key->id)?>"onclick="return confirm('Yakin Diedit')"
        class ="btn-info btn-sm" class ="btn btn-info  btn-sm">Edit<a/>
@@ -47,8 +47,9 @@
        <?php } ?>
 
   
-      
-      
+      </td>
+      </tr>
+      <?php } ?>
   
        
  
@@ -100,5 +101,8 @@
   </script>
 
 </body>
+
+
+
 
 </html>
