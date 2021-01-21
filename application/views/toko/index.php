@@ -45,8 +45,6 @@
        class ="btn-danger btn-sm">Delete</a>
 
        <?php } ?>
-
-  
       </td>
       </tr>
       <?php } ?>
