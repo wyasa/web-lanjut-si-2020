@@ -98,7 +98,7 @@ class o_controller extends CI_Controller
 	}
 
 
-	}
+
 	
 
 	// public function index ($nim=0,$jur=0)
@@ -119,7 +119,6 @@ class o_controller extends CI_Controller
 	// 	 echo 'D3 Sistem Informasi gimana  ';
 	// }
 
-?>
 
 
 }

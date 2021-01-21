@@ -1,9 +1,6 @@
-
-
-
       <div class="container-fluid">
         <h1 class="mt-4"><font color='blue'>Rekap Barang Masuk</font></h1>
-        <a href="<?= site_url('i_controller/tambah') ?>" class="btn btn-warning bg-dark" ><font color='white'>Input Barang</font></a> <br> <br>
+        <a href=" <?= site_url('i_controller/tambah') ?> " class="btn btn-warning bg-dark" ><font color='white'>Input Barang</font></a> <br> <br>
         <div class="card-body">
     
     <table class="table table-bordered">
@@ -67,22 +64,6 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"> </script>
-
-<script src="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> </script>
-<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"> </script>
-<script> $(document).ready( function () {
-    $('.table').DataTable();
-} );
-</script>
-</div>
-
 
 
 
@@ -106,6 +87,25 @@
     });
   </script>
 
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"> </script>
+
+<script src="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> </script>
+<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"> </script>
+<script> $(document).ready( function () {
+    $('.table').DataTable();
+} );
+</script>
+</div>
+
 </body>
+<head>
 
 </html>

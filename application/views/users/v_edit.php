@@ -26,9 +26,21 @@
 
     
     <div class="form-group">
-		<label for="hak_akses">Hak Akses</label>
-		<input type="text" value="<?=$data_id->hak_akses?>" name="hak_akses" class="form-control" placeholder="Masukan Nama..">
-	</div>
+    <label for="hak_akses">Hak Akses</label>
+		<!-- <input type="text" name="hak_akses" class="form-control" placeholder="Masukan Hak Akses...">
+    </div> -->
+    
+ 
+<h6><select name="hak_akses">
+<option value="<?=$data_id->password?>"></option>
+<option value="Admin">Admin</option>
+<option value="Operator">Operator</option>
+<option value="Kasir">
+Kasir</option>
+
+</select>
+<br>
+<br>
 
     
   </div>

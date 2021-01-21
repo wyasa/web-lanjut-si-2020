@@ -95,7 +95,7 @@ class i_controller extends CI_Controller
 	$this-> m_input-> update_data($where,$data,'pembelian');
 	redirect('i_controller/index');
 		
-	}
+	
 
 
 	}
@@ -119,7 +119,6 @@ class i_controller extends CI_Controller
 	// 	 echo 'D3 Sistem Informasi gimana  ';
 	// }
 
-?>
 
 
 }
