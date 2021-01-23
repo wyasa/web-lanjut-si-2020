@@ -111,8 +111,12 @@
             <input type="password" name="txtpassword" class="form-control" placeholder="Password" required="required">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+            <button type="submit" class="btn btn-primary btn-block active ">Log in</button>
         </div>
+     
+        <a href=" <?=site_url('AController/stock')?> " class="btn btn-warning btn-block active" role="button" aria-pressed="true"><font color='white'>  
+        Log in as Guest </font></a>
+      
         <div class="clearfix">
             <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
             <!-- <a href="#" class="float-right">Forgot Password?</a> -->

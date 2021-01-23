@@ -16,7 +16,6 @@
       <th scope="col">Merk</th>
       <th scope="col">Kategori</th>
       <th scope="col">Jumlah</th>
-      
       <th scope="col"><center> Aksi </center></th>
       
      

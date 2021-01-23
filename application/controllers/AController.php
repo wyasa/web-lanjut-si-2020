@@ -3,7 +3,11 @@
 
 
 class AController extends CI_Controller
+
 {
+
+
+
 	public function __construct(){
 		parent:: __construct();
 
@@ -13,6 +17,8 @@ class AController extends CI_Controller
 
 		}
 	}
+
+
 
 	public function index () {
 		$data['stok']= $this-> m_stok->getAll();
