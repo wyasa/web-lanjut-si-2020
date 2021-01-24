@@ -50,7 +50,8 @@ $( function() {
         <a href="<?= site_url('AController/index') ?>" class="list-group-item list-group-item-action bg-">STOK</a>
         <a href="<?= site_url('i_controller/index') ?>" class="list-group-item list-group-item-action bg-light">INPUT</a>
         <a href=" <?= site_url('o_controller/index') ?> " class="list-group-item list-group-item-action bg-light">OUTPUT</a>
-        <a href=" <?= site_url('user/index') ?> "class="list-group-item list-group-item-action bg-light">USERS</a>
+        <!-- <a href=" <?= site_url('user/index') ?> "class="list-group-item list-group-item-action bg-light">USERS</a> -->
+      
         <!-- <a href= " <?= site_url('login/logout') ?> " class="list-group-item list-group-item-action bg-light">LOGOUT</a> -->
         <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a> -->
@@ -66,41 +67,14 @@ $( function() {
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-
-         
         </button>
 
         
-       
-    
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          
-
-          <!-- <span class="nav navbar-nav navbar-right"> <h3> <font color='white'>
-      <?php echo $this-> session-> userdata ('username','hak_akses');?> </font> </h3>
-    </span>
-    <span class="nav navbar-nav navbar-right"> <h3> <font color='white'> (
-      <?php echo $this-> session-> userdata ('hak_akses');?>  ) </font> </h3>
-    </span> -->
-
-       
-       <li class="nav-item">
-       <button class="left btn btn-success"  id="menu-toggle" href=" <?= site_url('login/index') ?>  " > Log in <font color='white'></font></button>
-              <!-- <a class="nav-link" href="#">Link</a> -->
-            </li> 
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>  -->
-             <!-- </div>
-            </li> --> 
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">       
+      
+       <a  href="<?= site_url('login/index')?>" class="left btn btn-success" > Log in <font color='white'></font></a>
+         
           </ul>
         </div>
         

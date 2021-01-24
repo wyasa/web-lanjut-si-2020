@@ -6,6 +6,12 @@ class AController extends CI_Controller
 
 {
 
+	public function stock() {
+		$data['stok']= $this-> m_stok->getAll();
+		$this->load->view('toko/header');
+		$this->load->view('toko/index',$data);
+	}
+
 
 
 	public function __construct(){

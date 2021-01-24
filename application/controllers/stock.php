@@ -11,7 +11,7 @@ class stock extends CI_Controller
 	{
 		$data['stok']= $this->m_stok->getAll();
 		$this->load->view('toko/header2');
-		$this->load->view('toko/index',$data);
+		$this->load->view('toko/index2',$data);
 	}
 
 }

@@ -5,6 +5,8 @@
 class user extends CI_Controller
 {
 	
+	
+
 	public function __construct(){
 		parent:: __construct();
 		$this->load->model('m_user');
@@ -15,9 +17,10 @@ class user extends CI_Controller
 	}
 
 	public function createakun (){
-		$this-> load ->view('toko/header');
+		$this-> load ->view('toko/header2');
 		$this->load->view('users/v_user.php');
-	}
+	} 
+	
 
 	public function index () {
 		$data['user']= $this-> m_user ->getAll();
