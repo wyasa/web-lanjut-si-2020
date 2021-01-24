@@ -96,6 +96,7 @@ class o_controller extends CI_Controller
 	redirect('o_controller/index');
 		
 	}
+	
 
 
 

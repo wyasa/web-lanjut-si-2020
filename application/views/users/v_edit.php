@@ -29,14 +29,18 @@
     <label for="hak_akses">Hak Akses</label>
 		<!-- <input type="text" name="hak_akses" class="form-control" placeholder="Masukan Hak Akses...">
     </div> -->
-    
- 
+    <br>
+
+    <input type="text" readonly value ="<?=$data_id->hak_akses?>" >   
+ <br>
+
+ <label class="p-3 ">  Ubah Hak_Akses ke :</label>
 <h6><select name="hak_akses">
-<option value="<?=$data_id->password?>"></option>
+
+<option value="#"> --Pilih-- </option>
 <option value="Admin">Admin</option>
 <option value="Operator">Operator</option>
-<option value="Kasir">
-Kasir</option>
+<option value="Kasir">Kasir</option>
 
 </select>
 <br>
@@ -44,9 +48,17 @@ Kasir</option>
 
     
   </div>
-    
-     <input type ="submit" name="submit" value="Simpan" 
-     class="btn btn-primary">
+ 
+     <input type ="submit" name="submit"  value="Simpan " 
+      class="btn btn-primary "  onclick="simpan()">
+      <script>
+
+            function simpan (){
+            swal("Good job!", "You clicked the button!", "success");
+            }
+        </script>
+            
+
      
      <a href="<?= site_url('AController/index')?>"
      class="btn btn-warning">Batal</a>
