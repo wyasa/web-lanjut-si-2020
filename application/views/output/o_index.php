@@ -8,7 +8,7 @@
     
     <table class="table table-bordered">
   <thead>
-  <tr class="table-success  ">
+  <tr class="table-danger  ">
     
     <th scope="col">NO</th>
     <th scope="col">KD.PENJUALAN</th>  
@@ -26,7 +26,7 @@
   <tbody>
   <?php $no =1; ?>
   <?php foreach ($penjualan as $key) { ?>
-    <tr class="table-danger  ">
+    <tr class="table-warning ">
       <th scope="row"><?=$no++?></th>
       <td> <?= $key->kd_penjualan ?> </td>
       <td> <?= $key->id ?> </td>

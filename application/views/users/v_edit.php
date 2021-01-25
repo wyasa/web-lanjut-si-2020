@@ -50,14 +50,8 @@
   </div>
  
      <input type ="submit" name="submit"  value="Simpan " 
-      class="btn btn-primary "  onclick="simpan()">
-      <script>
-
-            function simpan (){
-            swal("Good job!", "You clicked the button!", "success");
-            }
-        </script>
-            
+      class="btn btn-primary " >
+     
 
      
      <a href="<?= site_url('AController/index')?>"
